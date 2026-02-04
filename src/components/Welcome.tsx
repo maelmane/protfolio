@@ -7,6 +7,8 @@ const FONT_WEIGHTS = {
   title: { min: 400, max: 900, default: 400 },
 };
 
+type FontWeightType = keyof typeof FONT_WEIGHTS
+
 const renderText = (
   text: string,
   className: string | undefined,
@@ -23,13 +25,13 @@ const renderText = (
   ));
 };
 
-const setUpTextHover = (container, type) => {
-  if (!container) return;
+const setUpTextHover = (container: HTMLElement | null, type: FontWeightType) => {
+  if (!container) return () => {};
 
-  const letters = container.querySelectorAll("span");
+  const letters: NodeListOf<HTMLSpanElement> = container.querySelectorAll("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
 
-  const animateLetter = (letter, weight, duration = 0.25) => {
+  const animateLetter = (letter: gsap.TweenTarget, weight: any, duration = 0.25) => {
     return gsap.to(letter, {
       duration,
       ease: "power2.out",
@@ -37,14 +39,14 @@ const setUpTextHover = (container, type) => {
     });
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     const { left } = container.getBoundingClientRect();
     const mouseX = e.clientX - left;
 
     letters.forEach((letter) => {
       const { left: l, width: w } = letter.getBoundingClientRect();
       const distance = Math.abs(mouseX - (l - left + w / 2));
-      const intensity = Math.exp(-(distance ** 2) / 20000);
+      const intensity = Math.exp(-(distance ** 2) / 10000);
 
       animateLetter(letter, min + (max - min) * intensity);
     });
