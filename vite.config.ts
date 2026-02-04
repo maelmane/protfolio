@@ -11,15 +11,15 @@ export default defineConfig({
     alias: {
       "#components": resolve(
         dirname(fileURLToPath(import.meta.url)),
-        "components",
+        "src/components",
       ),
       "#constants": resolve(
         dirname(fileURLToPath(import.meta.url)),
-        "constants",
+        "src/constants",
       ),
-      "#store": resolve(dirname(fileURLToPath(import.meta.url)), "store"),
-      "#hoc": resolve(dirname(fileURLToPath(import.meta.url)), "hoc"),
-      "#window": resolve(dirname(fileURLToPath(import.meta.url)), "window"),
+      "#store": resolve(dirname(fileURLToPath(import.meta.url)), "src/store"),
+      "#hoc": resolve(dirname(fileURLToPath(import.meta.url)), "src/hoc"),
+      "#window": resolve(dirname(fileURLToPath(import.meta.url)), "src/window"),
     },
   },
 });
