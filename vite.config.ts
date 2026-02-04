@@ -9,17 +9,17 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "#components": resolve(
+      "@/components": resolve(
         dirname(fileURLToPath(import.meta.url)),
         "src/components",
       ),
-      "#constants": resolve(
+      "@/constants": resolve(
         dirname(fileURLToPath(import.meta.url)),
         "src/constants",
       ),
-      "#store": resolve(dirname(fileURLToPath(import.meta.url)), "src/store"),
-      "#hoc": resolve(dirname(fileURLToPath(import.meta.url)), "src/hoc"),
-      "#window": resolve(dirname(fileURLToPath(import.meta.url)), "src/window"),
+      "@/store": resolve(dirname(fileURLToPath(import.meta.url)), "src/store"),
+      "@/hoc": resolve(dirname(fileURLToPath(import.meta.url)), "src/hoc"),
+      "@/window": resolve(dirname(fileURLToPath(import.meta.url)), "src/window"),
     },
   },
 });
