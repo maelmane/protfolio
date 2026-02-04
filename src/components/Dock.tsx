@@ -38,9 +38,9 @@ const Dock = () => {
     };
 
     const resetIcons = () => {
-      icons.forEach((icon: any) =>
-        gsap.to(icon, { scale: 1, y: 0, duration: 0.3, ease: "power1.out" }),
-      );
+      icons.forEach((icon: any) => {
+        gsap.to(icon, { scale: 1, y: 0, duration: 0.3, ease: "power1.out" });
+      });
     };
 
     dock.addEventListener("mousemove", handleMouseMove);
