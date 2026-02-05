@@ -252,7 +252,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "brainwave.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -261,7 +261,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "brainwave.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -401,12 +401,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/mael-3.jpg",
       description: [
         "Hey! I’m Mael 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+        "I specialize in JavaScript, React, and Next.js and I love making things feel smooth and fast",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me solving Rubick's cube, reading books, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Outside of dev work, you'll find me solving Rubik's Cube, reading books, or trying to convince myself to buy a new gadget I want😅",
       ],
     },
   ],
