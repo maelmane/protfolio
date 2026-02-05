@@ -1,7 +1,6 @@
 import { WindowControls } from "@/components";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import useWindowStore from "@/store/window";
-import React from "react";
 
 const Image = () => {
   const { windows } = useWindowStore();
@@ -31,5 +30,5 @@ const Image = () => {
   );
 };
 
-const ImageWindow = WindowWrapper(Image, "imgfile")
+const ImageWindow = WindowWrapper(Image, "imgfile");
 export default ImageWindow;

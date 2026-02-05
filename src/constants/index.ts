@@ -48,12 +48,12 @@ const dockApps = [
     icon: "safari.png",
     canOpen: true,
   },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
+  //{
+  //  id: "photos",
+  //  name: "Gallery", // was "Photos"
+  //  icon: "photos.png",
+  //  canOpen: true,
+  //},
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
@@ -191,24 +191,24 @@ const photosLinks = [
   },
 ];
 
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
-];
+//const gallery = [
+//  {
+//    id: 1,
+//    img: "/images/gal1.png",
+//  },
+//  {
+//    id: 2,
+//    img: "/images/gal2.png",
+//  },
+//  {
+//    id: 3,
+//    img: "/images/gal3.png",
+//  },
+//  {
+//    id: 4,
+//    img: "/images/gal4.png",
+//  },
+//];
 
 export {
   navLinks,
@@ -218,7 +218,7 @@ export {
   techStack,
   socials,
   photosLinks,
-  gallery,
+  //gallery,
 };
 
 const WORK_LOCATION = {
