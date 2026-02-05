@@ -48,12 +48,12 @@ const dockApps = [
     icon: "safari.png",
     canOpen: true,
   },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
+  //{
+  //  id: "photos",
+  //  name: "Gallery", // was "Photos"
+  //  icon: "photos.png",
+  //  canOpen: true,
+  //},
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
@@ -77,25 +77,45 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+    date: "Feb 9, 2024",
+    title: "Introduction à Mojo : Commençons par le commencement",
     image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    link: "https://syslog.dti.crosemont.quebec/node/62",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Feb 16, 2024",
+    title: "Mojo: Fondements de la programmation et syntaxe",
+    image: "/images/blog1.png",
+    link: "https://syslog.dti.crosemont.quebec/node/103",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Feb 23, 2024",
+    title: "Mojo: Installation et premier programme",
+    image: "/images/blog1.png",
+    link: "https://syslog.dti.crosemont.quebec/node/143",
+  },
+  {
+    id: 4,
+    date: "Mar 3, 2024",
+    title: "Mojo: Intégration de Python",
+    image: "/images/blog1.png",
+    link: "https://syslog.dti.crosemont.quebec/node/197",
+  },
+  {
+    id: 5,
+    date: "Mar 9, 2024",
+    title: "Mojo: Présentation de projets",
+    image: "/images/blog1.png",
+    link: "https://syslog.dti.crosemont.quebec/node/208",
+  },
+  {
+    id: 6,
+    date: "Mar 20, 2024",
+    title: "Mojo: Perspectives futures",
+    image: "/images/blog1.png",
+    link: "https://syslog.dti.crosemont.quebec/node/255",
   },
 ];
 
@@ -106,7 +126,7 @@ const techStack = [
   },
   {
     category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["React Native", "Expo", "Android", "Kotlin"],
   },
   {
     category: "Styling",
@@ -114,15 +134,15 @@ const techStack = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Python", "RESTful API"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["PostgreSQL", "MySQL", "MS SQL Server"],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Docker", "Vercel", "Heroku"],
   },
 ];
 
@@ -132,28 +152,14 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/maelmane",
   },
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
-  },
-  {
-    id: 3,
-    text: "Twitter/X",
-    icon: "/icons/twitter.svg",
-    bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
-  },
-  {
-    id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "https://www.linkedin.com/in/maël-mane-a08234300",
   },
 ];
 
@@ -185,24 +191,24 @@ const photosLinks = [
   },
 ];
 
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
-];
+//const gallery = [
+//  {
+//    id: 1,
+//    img: "/images/gal1.png",
+//  },
+//  {
+//    id: 2,
+//    img: "/images/gal2.png",
+//  },
+//  {
+//    id: 3,
+//    img: "/images/gal3.png",
+//  },
+//  {
+//    id: 4,
+//    img: "/images/gal4.png",
+//  },
+//];
 
 export {
   navLinks,
@@ -212,7 +218,7 @@ export {
   techStack,
   socials,
   photosLinks,
-  gallery,
+  //gallery,
 };
 
 const WORK_LOCATION = {
@@ -225,7 +231,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "BrainWave Website",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -233,44 +239,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "BrainWave.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
+            "Fictional landing page for an AI company.",
+            "Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.",
             "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
           ],
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "brainwave.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+          href: "https://brainwave-hha8mik9k-maelmanes-projects.vercel.app/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "brainwave.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-1.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
         },
       ],
     },
@@ -278,7 +274,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Simple Kanban",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -286,44 +282,33 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Simple Kanban.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
+            "A responsive Kanban board application that allows you to manage tasks across different stages of your workflow. ",
             "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "simple-kanban.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://simple-kanban-vert.vercel.app/",
           position: "top-20 left-20",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "simple-kanban.gif",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 left-80",
-          imageUrl: "/images/project-2.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
+          imageUrl: "/images/project-2.gif",
         },
       ],
     },
@@ -331,7 +316,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Syvra Planner",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -339,44 +324,35 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "Syvra Planner.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "The essential tool for organizing your time quickly and easily. A smart planner designed to work for you.",
+            "Enhance your calendar in 2 clicks! It adapts to your mood and optimizes your schedule.",
+            "Connect with your favorite external calendars.",
+            "It's built with Next.Js and TailwindCSS, so it works smoothly on both computers and mobile devices with a clean, modern design.",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "syvra-planner.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "https://planner.syvra.tech/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "syvra-planner.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project-3.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
         },
       ],
     },
@@ -397,7 +373,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/mael-1.JPG",
     },
     {
       id: 2,
@@ -406,16 +382,16 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/mael-3.jpg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "photoshoot-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/mael-2.PNG",
     },
     {
       id: 4,
@@ -425,12 +401,12 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/mael-3.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+        "Hey! I’m Mael 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "I specialize in JavaScript, React, and Next.js and I love making things feel smooth and fast",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "Outside of dev work, you'll find me solving Rubik's Cube, reading books, or trying to convince myself to buy a new gadget I want😅",
       ],
     },
   ],
@@ -449,8 +425,6 @@ const RESUME_LOCATION = {
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
     },
   ],
 };
