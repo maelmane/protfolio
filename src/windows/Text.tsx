@@ -1,4 +1,3 @@
-import { INITIAL_Z_INDEX } from "@/constants";
 import { WindowControls } from "@/components";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import useWindowStore from "@/store/window";

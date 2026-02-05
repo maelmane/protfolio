@@ -386,7 +386,7 @@ const ABOUT_LOCATION = {
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "photoshoot-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
