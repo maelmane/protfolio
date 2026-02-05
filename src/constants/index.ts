@@ -138,7 +138,7 @@ const techStack = [
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL", "MySQL", "MS SQL Server"],
+    items: ["PostgreSQL", "MySQL", "MS SQL Server"],
   },
   {
     category: "Dev Tools",
