@@ -1,4 +1,6 @@
-const navLinks = [
+import type { DockApp, NavIcon, NavLink } from "./types";
+
+const navLinks: NavLink[] = [
   {
     id: 1,
     name: "Projects",
@@ -16,7 +18,7 @@ const navLinks = [
   },
 ];
 
-const navIcons = [
+const navIcons: NavIcon[] = [
   {
     id: 1,
     img: "/icons/wifi.svg",
@@ -35,7 +37,7 @@ const navIcons = [
   },
 ];
 
-const dockApps = [
+const dockApps: DockApp[] = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
