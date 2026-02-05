@@ -5,6 +5,12 @@ import { Search } from "lucide-react";
 import useLocationStore from "@/store/location";
 import clsx from "clsx";
 import useWindowStore from "@/store/window";
+import type { WindowKey } from "@/constants/types.ts";
+
+const ITEM_TO_WINDOW_KEY: Record<string, WindowKey> = {
+  txt: "txtfile",
+  img: "imgfile",
+};
 
 const Finder = () => {
   const { activeLocation, setActiveLocation } = useLocationStore();
@@ -17,7 +23,7 @@ const Finder = () => {
       return window.open(item.href, "_blank");
     }
 
-    openWindow(`${item.fileType}${item.kind}`, item);
+    openWindow(ITEM_TO_WINDOW_KEY[item.fileType], item);
   };
 
   const renderList = (items: any) =>
@@ -38,6 +44,7 @@ const Finder = () => {
     <>
       <div id="window-header">
         <WindowControls target="finder" />
+        <h2>Portfolio</h2>
         <Search className="icon" />
       </div>
 

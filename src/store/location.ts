@@ -1,20 +1,22 @@
+import type { LocationStore } from "@/constants/types.ts";
 import { locations } from "@/constants";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
 const DEFAULT_LOCATION = locations.work;
 
-const useLocationStore = create(
+const useLocationStore = create<LocationStore>()(
   immer((set) => ({
     activeLocation: DEFAULT_LOCATION,
 
-    setActiveLocation: (location = null) =>
-      set((state: any) => {
+    setActiveLocation: (location) =>
+      set((state) => {
+        if (location === undefined) return;
         state.activeLocation = location;
       }),
 
     resetLocation: () =>
-      set((state: any) => {
+      set((state) => {
         state.activeLocation = DEFAULT_LOCATION;
       }),
   })),
