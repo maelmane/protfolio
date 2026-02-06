@@ -1,6 +1,6 @@
 import { Dock, Navbar, Welcome } from "@/components";
 import gsap from "gsap";
-import { Draggable } from "gsap/dist/Draggable";
+import { Draggable } from "gsap/Draggable";
 import {
   Finder,
   Resume,

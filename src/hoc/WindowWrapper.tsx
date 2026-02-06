@@ -2,7 +2,7 @@ import type { WindowKey } from "@/constants/types.ts";
 import useWindowStore from "@/store/window";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Draggable } from "gsap/dist/Draggable";
+import { Draggable } from "gsap/Draggable";
 import { useLayoutEffect, useRef } from "react";
 
 const WindowWrapper = (Component: any, windowKey: WindowKey) => {
