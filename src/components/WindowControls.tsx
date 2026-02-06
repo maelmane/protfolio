@@ -1,7 +1,7 @@
+import type { WindowControlsProps } from "@/constants/types.ts";
 import useWindowStore from "@/store/window";
-import React from "react";
 
-const WindowControls = ({ target }) => {
+const WindowControls = ({ target }: WindowControlsProps) => {
   const { closeWindow } = useWindowStore()!;
   return (
     <div id="window-controls">

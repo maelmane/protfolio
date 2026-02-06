@@ -7,7 +7,7 @@ export interface Window {
 }
 
 export interface DockApp {
-  id: string;
+  id: WindowKey;
   name?: string;
   icon?: string;
   canOpen: boolean;
@@ -21,7 +21,11 @@ export interface NavIcon {
 export interface NavLink {
   id: number;
   name: string;
-  type: string;
+  type: WindowKey;
+}
+
+export interface WindowControlsProps {
+  target: WindowKey;
 }
 
 export type WindowKey = keyof typeof WINDOW_CONFIG;
