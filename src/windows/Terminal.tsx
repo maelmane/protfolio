@@ -3,7 +3,7 @@
 import { WindowControls } from "@/components";
 import { techStack } from "@/constants";
 import WindowWrapper from "@/hoc/WindowWrapper";
-import { Check, Flag, Wind } from "lucide-react";
+import { Check, Flag } from "lucide-react";
 
 const Terminal = () => {
   return (

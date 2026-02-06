@@ -1,13 +1,16 @@
+import type { WindowKey, WindowStore } from "@/constants/types.ts";
 import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "@/constants/index.ts";
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
-const useWindowStore = create(
+
+
+const useWindowStore = create<WindowStore>()(
   immer((set) => ({
     windows: WINDOW_CONFIG,
     nextZIndex: INITIAL_Z_INDEX + 1,
 
-    openWindow: (windowKey: string, data = null) =>
+    openWindow: (windowKey: WindowKey, data = null) =>
       set((state: any) => {
         const win = state.windows[windowKey];
         if (!win) return;
@@ -17,7 +20,7 @@ const useWindowStore = create(
         state.nextZIndex++;
       }),
 
-    closeWindow: (windowKey: string) =>
+    closeWindow: (windowKey: WindowKey) =>
       set((state: any) => {
         const win = state.windows[windowKey];
         if (!win) return;
@@ -26,7 +29,7 @@ const useWindowStore = create(
         win.data = null;
       }),
 
-    focusWindow: (windowKey: string) =>
+    focusWindow: (windowKey: WindowKey) =>
       set((state: any) => {
         const win = state.windows[windowKey];
         if (!win) return;

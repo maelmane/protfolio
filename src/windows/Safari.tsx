@@ -1,4 +1,4 @@
-import { blogPosts } from "#constants/index.ts";
+import { blogPosts } from "@/constants";
 import { WindowControls } from "@/components";
 import WindowWrapper from "@/hoc/WindowWrapper";
 import {
@@ -12,7 +12,6 @@ import {
   Share,
   ShieldHalf,
 } from "lucide-react";
-import React from "react";
 
 const Safari = () => {
   return (

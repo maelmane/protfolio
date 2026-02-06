@@ -1,4 +1,6 @@
-const navLinks = [
+import type { DockApp, NavIcon, NavLink } from "./types";
+
+const navLinks: NavLink[] = [
   {
     id: 1,
     name: "Projects",
@@ -16,7 +18,7 @@ const navLinks = [
   },
 ];
 
-const navIcons = [
+const navIcons: NavIcon[] = [
   {
     id: 1,
     img: "/icons/wifi.svg",
@@ -35,7 +37,7 @@ const navIcons = [
   },
 ];
 
-const dockApps = [
+const dockApps: DockApp[] = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
@@ -373,7 +375,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/mael-1.JPG",
+      imageUrl: "/images/mael-1.jpg",
     },
     {
       id: 2,
@@ -391,7 +393,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/mael-2.PNG",
+      imageUrl: "/images/mael-2.png",
     },
     {
       id: 4,
@@ -475,6 +477,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  trash: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
