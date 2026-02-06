@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Portfolio — TypeScript + React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, macOS-style portfolio showcasing windowed UI components, animations, and small utilities (PDF viewer, terminal-like window, image viewer). Built with modern TypeScript tooling and optimized for development with Vite + TailwindCSS.
 
-Currently, two official plugins are available:
+**Quick Start**
+- **Install:** `npm install`
+- **Dev server:** `npm run dev` — start Vite with hot reload
+- **Build:** `npm run build` — TypeScript build + Vite production bundle
+- **Preview:** `npm run preview` — preview production build locally
+- **Lint:** `npm run lint` — run ESLint
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Scripts**
+- **dev:** `vite`
+- **build:** `tsc -b && vite build`
+- **preview:** `vite preview`
+- **lint:** `eslint .`
 
-## React Compiler
+**Tech Stack**
+- **Framework:** React 19 + TypeScript
+- **Bundler:** Vite
+- **Styling:** TailwindCSS
+- **Animations:** GSAP
+- **State:** Zustand + Immer
+- **PDF Viewer:** react-pdf
+- **Tooling:** ESLint, TypeScript
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Features**
+- Windowed UI with draggable and closable windows
+- Dock, Navbar, and window controls UI
+- Embedded resume (PDF) viewer and image viewer
+- Terminal-like interactive window and Finder
+- Smooth GSAP-powered animations and tooltips
 
-## Expanding the ESLint configuration
+**Project Structure**
+- **Entry:** [src/main.tsx](src/main.tsx)
+- **App shell:** [src/App.tsx](src/App.tsx)
+- **Components:** [src/components](src/components)
+- **Windows:** [src/windows](src/windows)
+- **Store:** [src/store](src/store)
+- **Constants & types:** [src/constants](src/constants)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Development Notes**
+- Path aliases configured in `package.json` (`@/constants/*`, `@/components/*`) for convenience.
+- TypeScript build is run as part of `npm run build` (`tsc -b`).
+- Ensure Tailwind production purge is correctly configured if adding classes dynamically.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Deploy**
+- Build with `npm run build` and serve the `dist` folder.
+- For static hosts (Netlify, Vercel), point the deploy output to the `dist` directory.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Contributing**
+- Fork, create a feature branch, and open a PR.
+- Run `npm run lint` and ensure TypeScript compiles before opening PRs.
+- Describe behavior changes clearly in PR descriptions.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Credits**
+- Built with Vite and open-source libraries listed in `package.json`.
